@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./acv-trade-in.js"></script>
+</head>
+    <body>
+
+    <script>
+        function addTradeInComponent () {
+            const params = new URLSearchParams(window.location.search)
+            const dealer = params.get('dealer_id');
+
+            const newDiv = document.createElement("acv-trade-in");
+
+            newDiv.setAttribute('dealer', dealer);
+            document.body.insertBefore(newDiv, document.body.firstChild);
+        }
+        addTradeInComponent();
+    </script>
+    </body>
+</html>
